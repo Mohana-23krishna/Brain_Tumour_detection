@@ -114,7 +114,7 @@ st.write("Upload an MRI scan image to detect brain tumors using AI.")
 # ------------------------
 @st.cache_resource
 def load_ai_model():
-    model = load_model("model.h5")
+    model = load_model("model.h5", compile=False)
     return model
 
 model = load_ai_model()
